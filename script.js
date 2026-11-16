@@ -62,3 +62,30 @@ function confirmOrder(event) {
     <p><strong>Total Paid:</strong> Rs. ${total}</p>
   `;
 }
+// 5. Live Search & Price Filter on Menu Page
+function filterMenu() {
+  const searchText = document.getElementById("searchInput").value.toLowerCase();
+  const maxPrice = document.getElementById("priceFilter").value;
+  const rows = document.querySelectorAll("#menuTable tbody tr");
+  let visibleCount = 0;
+
+  rows.forEach(function (row) {
+    const coffeeText = row.cells[0].textContent.toLowerCase();
+    const rowPrice = parseInt(row.getAttribute("data-price"));
+
+    const matchesSearch = coffeeText.includes(searchText);
+    const matchesPrice = maxPrice === "all" || rowPrice <= parseInt(maxPrice);
+
+    if (matchesSearch && matchesPrice) {
+      row.style.display = "";
+      visibleCount++;
+    } else {
+      row.style.display = "none";
+    }
+  });
+
+  const noResults = document.getElementById("noResultsMsg");
+  if (noResults) {
+    noResults.style.display = visibleCount === 0 ? "block" : "none";
+  }
+}
