@@ -1,51 +1,58 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <title>cafe Menu</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe KOD - Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<style>
-table, th, td {
-  border:1px solid black;
-}
-</style>
 <body>
-    <h1> Welcome To Cafe KOD</h1>
-    <h2>Cafe Menu</h2>
-    <table>
-    
-  <tr>
-    <th>Coffee</th> 
-    <th>Quantity</th>
-    <th>Price</th>
-  </tr>
-  <tr>
-    <td>Espresso</td>
-    <td> 3</td>
-    <td>500</td>
-  </tr>
-  <tr>
-    <td>Latte</td>
-    <td> 2</td>
-    <td>650</td>
-  </tr>
-  <tr>
-    <td>Americano</td>
-    <td> 1</td>
-    <td>700</td>
-  </tr>
-</table>
-<p> Come and take a cup of coffee made with coffee</p>
-<img src="picture.jpg"  width="500" height="333">
-<p>Click the button to confirm order.</p>
 
-<button onclick="myFunction()">Order Confirm</button>
+  <header>
+    <a href="index.html" class="logo">☕ Cafe KOD</a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="order.html">Order Now</a>
+    </nav>
+  </header>
 
-<script>
-function myFunction() {
-  alert("Hey! you confirm your order");
-}
-</script>
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Welcome To Cafe KOD</h1>
+        <h2>Freshly Brewed Tradition</h2>
+        <p><strong>"Come and take a cup of coffee made with coffee."</strong></p>
+        <p>
+          Experience rich aroma, handcrafted pours, and cozy vibes. Whether you need a bold morning Espresso or a smooth afternoon Latte, every cup is brewed fresh to order.
+        </p>
+        <a href="menu.html" class="btn">Explore Menu</a>
+        <a href="order.html" class="btn btn-secondary">Order Online</a>
+      </div>
+      <div class="hero-img">
+        <img src="picture.jpg" alt="Traditional copper pot pouring rich coffee into a patterned cup">
+      </div>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <h3>🌱 Pure Beans</h3>
+        <p>100% roasted coffee beans ground fresh right before brewing your cup.</p>
+      </div>
+      <div class="card">
+        <h3>🔥 Copper Brewed</h3>
+        <p>Traditional slow-pouring methods that lock in rich crema and bold flavor.</p>
+      </div>
+      <div class="card">
+        <h3>⚡ Quick Pickup</h3>
+        <p>Place your order online in seconds and pick it up piping hot.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Talia Tufail | Roll No: 26i3124 | Cafe KOD &copy; 2026</p>
+  </footer>
+
 </body>
 </html>

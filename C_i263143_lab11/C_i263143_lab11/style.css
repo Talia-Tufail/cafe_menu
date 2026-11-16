@@ -1,14 +1,135 @@
-body {
-  background-color: blanchedalmond;
+menu-box {
+  background-color: #fff8ee;
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid rgb(126, 82, 24);
 }
-h1 {
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1.05rem;
+}
+
+th, td {
+  border: 1px solid rgb(126, 82, 24);
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background-color: rgb(126, 82, 24);
+  color: blanchedalmond;
+  font-family: monospace;
+  font-size: 1.15rem;
+}
+
+tr:nth-child(even) {
+  background-color: #faebd7;
+}
+
+tr:hover {
+  background-color: #f3dcc0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: rgb(126, 82, 24);
+  color: blanchedalmond;
+  font-family: monospace;
+  font-size: 1.05rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background-color: rgb(155, 101, 19);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: rgb(138, 138, 68);
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: rgb(115, 115, 52);
+}
+
+/* Order Form Styling */
+.order-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.form-box {
+  background-color: #fff8ee;
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid rgb(126, 82, 24);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
   color: rgb(126, 82, 24);
-   font-family: monospace;
 }
-h2{
-    color: rgb(138, 138, 68);
-    font-family: monospace;
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1.5px solid rgb(138, 138, 68);
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 1rem;
+  color: rgb(126, 82, 24);
 }
-p{
-    color: rgb(155, 101, 19);
+
+.total-banner {
+  background-color: blanchedalmond;
+  border: 2px dashed rgb(126, 82, 24);
+  padding: 12px;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.receipt {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e8f5e9;
+  border: 2px solid rgb(138, 138, 68);
+  border-radius: 8px;
+  display: none;
+}
+
+/* Footer */
+footer {
+  background-color: rgb(126, 82, 24);
+  color: blanchedalmond;
+  text-align: center;
+  padding: 15px;
+  font-family: monospace;
+  margin-top: 40px;
+}
+
+footer p {
+  color: blanchedalmond;
+  margin: 0;
+  font-size: 0.95rem;
 }
