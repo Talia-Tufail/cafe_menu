@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe KOD - Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">☕ Cafe KOD</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="order.html">Order Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="menu-box">
+      <h1>Cafe Menu</h1>
+      <h2>Signature Coffee Selection</h2>
+      <p>Click any "Order This" button to jump straight to the order page with your drink selected!</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Coffee</th>
+            <th>Available Servings</th>
+            <th>Price (Rs.)</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Espresso</strong><br><small>Rich, bold single-origin shot</small></td>
+            <td>3</td>
+            <td>500</td>
+            <td><button class="btn" onclick="quickSelect('Espresso')">Order This</button></td>
+          </tr>
+          <tr>
+            <td><strong>Latte</strong><br><small>Smooth espresso with steamed milk</small></td>
+            <td>2</td>
+            <td>650</td>
+            <td><button class="btn" onclick="quickSelect('Latte')">Order This</button></td>
+          </tr>
+          <tr>
+            <td><strong>Americano</strong><br><small>Classic espresso topped with hot water</small></td>
+            <td>1</td>
+            <td>700</td>
+            <td><button class="btn" onclick="quickSelect('Americano')">Order This</button></td>
+          </tr>
+          <tr>
+            <td><strong>Turkish Copper Brew</strong><br><small>Our signature house specialty</small></td>
+            <td>4</td>
+            <td>750</td>
+            <td><button class="btn" onclick="quickSelect('Turkish Brew')">Order This</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <img src="picture.jpg" alt="Cafe KOD Special Coffee" style="width: 300px; border-radius: 10px; border: 2px solid rgb(126, 82, 24);">
+        <p style="margin-top: 10px;">Come and take a cup of coffee made with coffee</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Created by Talia Tufail | Roll No: 26i3124 | Cafe KOD &copy; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
