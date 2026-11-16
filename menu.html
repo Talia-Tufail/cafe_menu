@@ -13,6 +13,7 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="menu.html" class="active">Menu</a>
+      <a href="gallery.html">Gallery</a>
       <a href="order.html">Order Now</a>
     </nav>
   </header>
@@ -21,9 +22,19 @@
     <div class="menu-box">
       <h1>Cafe Menu</h1>
       <h2>Signature Coffee Selection</h2>
-      <p>Click any "Order This" button to jump straight to the order page with your drink selected!</p>
+      <p>Search by drink name or filter by price to find your perfect cup!</p>
 
-      <table>
+      <!-- NEW FEATURE: Search & Price Filter Controls -->
+      <div class="filter-bar">
+        <input type="text" id="searchInput" onkeyup="filterMenu()" placeholder="🔍 Search coffee (e.g., Latte, Espresso)...">
+        <select id="priceFilter" onchange="filterMenu()">
+          <option value="all">All Prices</option>
+          <option value="650">Under Rs. 650</option>
+          <option value="700">Under Rs. 700</option>
+        </select>
+      </div>
+
+      <table id="menuTable">
         <thead>
           <tr>
             <th>Coffee</th>
@@ -33,32 +44,36 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr data-price="500">
             <td><strong>Espresso</strong><br><small>Rich, bold single-origin shot</small></td>
             <td>3</td>
             <td>500</td>
             <td><button class="btn" onclick="quickSelect('Espresso')">Order This</button></td>
           </tr>
-          <tr>
-            <td><strong>Latte</strong><br><small>Smooth espresso with steamed milk</small></td>
+          <tr data-price="650">
+            <td><strong>Latte</strong> <span class="badge">Popular</span><br><small>Smooth espresso with steamed milk</small></td>
             <td>2</td>
             <td>650</td>
             <td><button class="btn" onclick="quickSelect('Latte')">Order This</button></td>
           </tr>
-          <tr>
+          <tr data-price="700">
             <td><strong>Americano</strong><br><small>Classic espresso topped with hot water</small></td>
             <td>1</td>
             <td>700</td>
             <td><button class="btn" onclick="quickSelect('Americano')">Order This</button></td>
           </tr>
-          <tr>
-            <td><strong>Turkish Copper Brew</strong><br><small>Our signature house specialty</small></td>
+          <tr data-price="750">
+            <td><strong>Turkish Copper Brew</strong> <span class="badge">House Special</span><br><small>Our signature copper-pot specialty</small></td>
             <td>4</td>
             <td>750</td>
             <td><button class="btn" onclick="quickSelect('Turkish Brew')">Order This</button></td>
           </tr>
         </tbody>
       </table>
+
+      <p id="noResultsMsg" style="display: none; text-align: center; font-weight: bold;">
+        No coffee matches your search. Try clearing the filter!
+      </p>
 
       <div style="text-align: center; margin-top: 20px;">
         <img src="picture.jpg" alt="Cafe KOD Special Coffee" style="width: 300px; border-radius: 10px; border: 2px solid rgb(126, 82, 24);">

@@ -270,3 +270,30 @@ footer p {
   margin: 0;
   font-size: 0.95rem;
 }
+/* Menu Search & Filter Feature */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.filter-bar input {
+  flex: 2;
+  min-width: 220px;
+}
+
+.filter-bar select {
+  flex: 1;
+  min-width: 160px;
+}
+
+.badge {
+  background-color: rgb(138, 138, 68);
+  color: #fff;
+  font-size: 0.75rem;
+  font-family: monospace;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 6px;
+}
